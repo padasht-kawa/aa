@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+
+
+
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+  <p> color:<input type="text" ng-model="color" ></p>
+  <h1 style="color: {{color}};"> hello</h1>
+
+  <p> fontsize:<input type="number" ng-model="fontsize" ></p>
+  <h1 style="font-size: {{fontsize}}px;"> hello</h1>
+
+
+    First Name: <input type="text" ng-model="firstName">
+    Last Name: <input type="text" ng-model="lastName">
+    
+    Full Name: {{firstName+ "   "+lastName}}
+    <h1 ng-reapt="x in numbers">{{x}}</h1>
+    
+</div>
+    
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+      $scope.firstName = "";
+      $scope.lastName = "";
+      $scope.numbers=[1,2,3,4,5,6];
+    });
+    </script>
+
+
+
+</body>
+</html>
